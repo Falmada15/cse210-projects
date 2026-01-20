@@ -1,0 +1,10 @@
+Explain the meaning of Version Control:
+-Version control is a system that keeps a history of changes in a project, allowing you to see what was changed, who made the change, when it happened, and why it was needed.
+Highlight a benefit of Version Control:
+-A benefit of version control is the ability to work as a team. Developers can work locally, even when offline, and later share their changes. It is a safe and organized system because if something goes wrong, you can return to a previous version and avoid losing important parts of the project.
+Example of version control: Describe the way version control might be used on a software development team.
+-In a software development team, version control is often used through branches. For example, one developer might create a branch to work on a new feature while another developer fixes a bug on a different branch. Each person commits their changes independently. Once the work is finished, the team reviews the changes and merges them into the main branch, ensuring the final code remains stable.
+Show a command used in Version Control (for example a Git command)
+-One of the commands is git status. This command shows the current state of the files, including which changes are staged, modified, or untracked.
+Thoroughly explain these concepts (this likely cannot be done in less than 100 words)
+-Version control is important because it helps developers keep track of changes in a project and work in an organized way. It allows the team to see what was changed, who made the change, and when it happened. This is especially useful when several people are working on the same project at the same time. Each developer can work on their own part, usually on a separate branch, without affecting the main code. If something goes wrong, version control makes it easy to go back to a previous version and fix the problem without losing work. Tools like Git help teams collaborate better, avoid mistakes, and keep the project stable as it grows.
