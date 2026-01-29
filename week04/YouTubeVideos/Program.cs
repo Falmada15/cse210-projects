@@ -10,7 +10,7 @@ class Program
         Video video1 = new Video("Learning C# Basics", "CodeAcademy", 600);
         video1.AddComment(new Comment("Alice", "Very helpful video!"));
         video1.AddComment(new Comment("Bob", "Clear explanation."));
-        video1.AddComment(new Comment("Charlie", "Thanks for this tutorial."));
+        video1.AddComment(new Comment("Charlie", "Thanks for this tutorialS."));
 
         Video video2 = new Video("OOP Concepts Explained", "DevSimplified", 850);
         video2.AddComment(new Comment("Diana", "Great examples."));
