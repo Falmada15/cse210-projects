@@ -8,24 +8,25 @@ public class ListingActivity : Activity
         "Who are people that you appreciate?",
         "What are your personal strengths?",
         "Who have you helped recently?",
-        "What makes you happy?",
+        "What are blessings in your life?",
         "Who are your personal heroes?"
     };
 
+    private List<string> _usedPrompts = new List<string>();
     private Random _random = new Random();
     private int _count;
 
     public ListingActivity()
     {
         _name = "Listing";
-        _description = "This activity will help you reflect on the positive things in your life.";
+        _description = "This activity will help you reflect on the good things in your life by listing as many positive items as you can.";
     }
 
     public void Run()
     {
         DisplayStartingMessage();
 
-        string prompt = _prompts[_random.Next(_prompts.Count)];
+        string prompt = GetRandomPrompt();
 
         Console.WriteLine();
         Console.WriteLine("List as many responses as you can to the following prompt:");
@@ -41,13 +42,36 @@ public class ListingActivity : Activity
         while (DateTime.Now < endTime)
         {
             Console.Write("> ");
-            Console.ReadLine();
-            _count++;
+            string response = Console.ReadLine();
+
+            if (!string.IsNullOrWhiteSpace(response))
+            {
+                _count++;
+            }
         }
 
         Console.WriteLine();
-        Console.WriteLine($"You listed {_count} items!");
+        Console.WriteLine($"You listed {_count} items.");
 
         DisplayEndingMessage();
+    }
+
+    private string GetRandomPrompt()
+    {
+        if (_usedPrompts.Count == _prompts.Count)
+        {
+            _usedPrompts.Clear();
+        }
+
+        string prompt;
+
+        do
+        {
+            prompt = _prompts[_random.Next(_prompts.Count)];
+        }
+        while (_usedPrompts.Contains(prompt));
+
+        _usedPrompts.Add(prompt);
+        return prompt;
     }
 }

@@ -10,7 +10,6 @@ public class GratitudeActivity : Activity
         _name = "Gratitude";
         _description = "This activity helps you focus on gratitude by listing things you are thankful for.";
     }
-
     public void Run()
     {
         DisplayStartingMessage();
