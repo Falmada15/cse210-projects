@@ -17,22 +17,20 @@ public class ReflectingActivity : Activity
         "Have you ever done anything like this before?",
         "How did you get started?",
         "How did you feel when it was complete?",
-        "What made this time different than other times when you were not as successful?",
+        "What made this time different than other times?",
         "What is your favorite thing about this experience?",
-        "What could you learn from this experience that applies to other situations?",
-        "What did you learn about yourself through this experience?",
+        "What did you learn about yourself?",
         "How can you keep this experience in mind in the future?"
     };
 
     private List<string> _usedPrompts = new List<string>();
     private List<string> _usedQuestions = new List<string>();
-
     private Random _random = new Random();
 
     public ReflectingActivity()
     {
         _name = "Reflecting";
-        _description = "This activity will help you reflect on times in your life when you have shown strength and resilience. It will guide you through meaningful questions to deepen your reflection.";
+        _description = "This activity will help you reflect on times in your life when you have shown strength and resilience.";
     }
 
     public void Run()
@@ -49,7 +47,7 @@ public class ReflectingActivity : Activity
         Console.ReadLine();
 
         Console.WriteLine();
-        Console.WriteLine("Now ponder on the following questions:");
+        Console.WriteLine("Now reflect on the following questions:");
         ShowSpinner(3);
 
         DateTime endTime = DateTime.Now.AddSeconds(_duration);

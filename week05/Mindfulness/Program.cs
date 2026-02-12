@@ -1,5 +1,13 @@
 using System;
 
+// Exceeding Requirements:
+// - Added a new GratitudeActivity as an additional mindfulness option.
+// - Implemented an ActivityLog class to track how many times each activity
+//   has been completed and the total time spent.
+// - Ensured that prompts and reflection questions are not repeated until
+//   all have been used in the current session.
+// - Added improved animations and structured user interaction.
+
 class Program
 {
     static void Main(string[] args)
